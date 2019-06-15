@@ -1,0 +1,26 @@
+{
+  "name": "node-training-practice",
+  "version": "1.0.0",
+  "description": "practice repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "extra":"npx babel-node extra"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReactPracticeUdemy/Node-Training-Practice.git"
+  },
+  "author": "Raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReactPracticeUdemy/Node-Training-Practice/issues"
+  },
+  "homepage": "https://github.com/ReactPracticeUdemy/Node-Training-Practice#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "i": "^0.3.6"
+  }
+}
