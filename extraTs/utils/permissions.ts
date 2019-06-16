@@ -9,6 +9,8 @@ import {
   ROLL_OF_HEAD_TRAINER
 } from "../constant";
 
+import { IHasPer } from "../interfaces";
+
 const PERMISSION = {
   [MODULE_USER]: {
     [PERMISSION_ALL]: [ROLL_OF_HEAD_TRAINER],
@@ -18,7 +20,9 @@ const PERMISSION = {
   }
 };
 
-export const hasPermission = (module_Name, role, permissionType) => {
+let hasPermission: IHasPer;
+
+hasPermission = (module_Name, role, permissionType) => {
 
   if(MODULE_USER[module_Name] === undefined){
     return false;
@@ -36,3 +40,4 @@ if(MODULE_USER[module_Name][permissionType].includes(role) === false ) {
 }
 
 
+export default hasPermission;

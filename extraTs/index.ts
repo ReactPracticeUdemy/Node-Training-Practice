@@ -11,7 +11,7 @@ import {
   ROLL_OF_HEAD_TRAINER
 } from "./constant";
 
-import { hasPermission } from "./utils";
+import { default as hasPermission } from "./utils/permissions";
 import { CheckEmail } from "./utils/validation";
 import { users } from "./constant";
 

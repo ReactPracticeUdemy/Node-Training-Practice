@@ -1,2 +1,2 @@
-export { diamond } from "./Diamond";
-export { equilateral } from "./Equilateral";
+export { default as diamond }  from "./Diamond";
+export { default as equilateral } from "./Equilateral";

@@ -1,4 +1,7 @@
-export const diamond = max => {
+import { IDPattern } from "../interfaces";
+
+let diamond: IDPattern;
+ diamond  = max => {
     let row, column;
       if (max < 2 || max > 10) {
           console.log(" Please enter the number between 2 to 10 only !");
@@ -14,7 +17,7 @@ export const diamond = max => {
           }
                     process.stdout.write("\n");
         }
-  
+
         for (row = 1; row <= max; row++) {
           for (column = max; column >= 0; column--) {
               if (column > max - row) {
@@ -27,3 +30,5 @@ export const diamond = max => {
       }
     }
   };
+
+  export default diamond;

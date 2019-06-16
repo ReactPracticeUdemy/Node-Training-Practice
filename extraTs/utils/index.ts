@@ -1,1 +1,1 @@
-export { hasPermission } from "./permissions";
+export { default as  hasPermission } from "./permissions";
