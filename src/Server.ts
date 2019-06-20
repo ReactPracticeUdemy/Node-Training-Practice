@@ -1,3 +1,4 @@
+import { traineeRouter } from "./router";
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import { errorHandler } from './libs/routes/errorHandler';
@@ -16,23 +17,16 @@ class Server {
   }
 
   bootstrap() {
-    this.setupRoutes();
     this.initBodyParser();
+    this.setupRoutes();
     return this;
   }
 
   setupRoutes() {
-    this.app.get('/health-check', (req, res) => res.send('I am OK'));
+    this.app.use("/api", traineeRouter);
 
-    this.app.post('/app', (req, res) => {
-      res.send('I am Fine !');
-    });
-
-    this.app.get('/check-error', (req, res) => {
-      throw new Error('i am error');
-    });
-    this.app.use(errorHandler);
     this.app.use(notFound);
+    this.app.use(errorHandler);
   }
 
   run() {
