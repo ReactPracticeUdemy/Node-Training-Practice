@@ -1,5 +1,5 @@
 import * as jwt from 'jsonwebtoken';
-import { default as hasPermission } from '../../../extraTs/utils/permissions';
+import { hasPermission } from '../../../extraTs/utils/permissions';
 import { configuration } from '../../config';
 
 const errorMessage = {

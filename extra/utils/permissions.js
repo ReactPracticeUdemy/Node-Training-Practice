@@ -24,13 +24,17 @@ export const hasPermission = (module_Name, role, permissionType) => {
     return false;
   }
 
-if(PERMISSION[module_Name][permissionType] === undefined){
+  if(PERMISSION[module_Name][permissionType] === undefined){
     return false;
   }
 
-if(PERMISSION[module_Name][permissionType].includes(role) === false ) {
-  return false;
-}
+  if(PERMISSION[module_Name][permissionType].includes(role) === false ) {
+    return false;
+  }
+
+    if(PERMISSION[module_Name] !== undefined && role == "head-trainer") {
+        return true
+    }
 
  return true;
 }
