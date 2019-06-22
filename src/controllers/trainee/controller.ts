@@ -1,4 +1,7 @@
 import { Request, Response } from 'express';
+import * as jwt from "jsonwebtoken";
+import { configuration } from "../../config/index";
+
 class TraineeController {
   public get(req: Request, res: Response) {
     res.send('get method called');
@@ -7,7 +10,11 @@ class TraineeController {
   public post(req: Request, res: Response) {
     const { id, name, email } = req.body ;
     console.log(`ID: ${id}, Name: ${name}, Email: ${email}`);
-    res.send("post method called");
+
+    const token = jwt.sign({ UserID: id, name }, configuration.secret, {
+      expiresIn: 60 * 60
+    });
+    res.send(`Token :- ${token}`);
   }
 
   public put(req: Request, res: Response) {
