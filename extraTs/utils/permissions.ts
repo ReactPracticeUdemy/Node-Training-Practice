@@ -24,15 +24,15 @@ let hasPermission: IHasPer;
 
 hasPermission = (module_Name, role, permissionType) => {
 
-  if(MODULE_USER[module_Name] === undefined){
+  if(PERMISSION[module_Name] === undefined){
     return false;
   }
 
-if(MODULE_USER[module_Name][permissionType] === undefined){
+if(PERMISSION[module_Name][permissionType] === undefined){
     return false;
   }
 
-if(MODULE_USER[module_Name][permissionType].includes(role) === false ) {
+if(PERMISSION[module_Name][permissionType].includes(role) === false ) {
   return false;
 }
 
