@@ -1,4 +1,4 @@
-import { userRepo } from "../repositories/user/ UserRepository";
+import { userRepo } from "../repositories/user/UserRepository";
 
 export const seedData = () => {
   userRepo.count().then((result) => {
